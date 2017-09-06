@@ -1,0 +1,14 @@
+<h1>Recipe Info</h1>
+<h2>title <%= @recipe.title %></h2>
+<h3><%= @recipe.chef %></h3>
+<h4><%= @recipe.ingredients %></h4>
+<h5><%= @recipe.directions %></h5>
+
+<a href="/recipes/<%= @recipe.id %>/edit"> Edit Recipe</a>
+<%= form_tag '/recipes/<%=@ recipe.id }', method: :delete do %>
+  <input type="submit" value="Delete Recipe" class="btn btn-danger">
+<% end %>
+
+<a href="/recipes/<%= recipe.id %>">Delete Recipe </a>
+
+<%= link_to "Delete Recipes" , "/recipes/#{ @recipe.id }", method: :delete %>
